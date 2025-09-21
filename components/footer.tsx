@@ -1,0 +1,81 @@
+import Link from "next/link";
+import Image from "next/image";
+
+const Footer = () => {
+  return (
+    <footer className="bg-gray-800 text-white py-4 mt-8">
+        <div className='max-w-screen-xl mx-auto px-4 w-full py-10 md:py-16'>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div>
+              <Link href="/" className="mb-10 block">
+                <Image src="/logo.webp" alt="Logo" width={120} height={40} />
+              </Link>
+              <p className="text-gray-400">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate enim sapiente ipsa, temporibus provident exercitationem.
+              </p>
+            </div>
+            <div>
+              <div className="flex gap-20">
+                <div className="flex-1 md:flex-none">
+                  <h4 className="mb-8 text-xl font-semibold text-white">Links</h4>
+                  <ul className="list-item space-y-5 text-gray-400">
+                    <li>
+                      <Link href="/">Home</Link>
+                    </li>
+                    <li>
+                      <Link href="/about">About Us</Link>
+                    </li>
+                    <li>
+                      <Link href="/room">Rooms</Link>
+                    </li>
+                    <li>
+                      <Link href="/contact">Contact Us</Link>
+                    </li>
+                  </ul>
+                </div>
+                <div className="flex-1 md:flex-none">
+                  <h4 className="mb-8 text-xl font-semibold text-white">Legal</h4>
+                  <ul className="list-item space-y-5 text-gray-400">
+                    <li>
+                      <Link href="#">Legal</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Term & Condition</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Payment Method</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Privacy Policy</Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h4 className="mb-8 text-xl font-semibold text-white">Newsletter</h4>
+              <p className="text-gray-400">Subscribe to our newsletter for the latest updates.</p>
+              <form action="#" className="mt-5">
+                <div className="mb-5 text-gray-700">
+                  <input
+                  name="email"
+                  type="text"
+                  placeholder="fatquladhim@example.com"
+                  className="w-full p-3 rounded-sm bg-white"
+                />
+                </div>
+                <button className="bg-orange-400 hover:bg-orange-500 font-bold text-white w-full text-center rounded-sm p-3">
+                  Subscribe
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div className='max-w-screen-xl mx-auto px-4 border-t border-gray-700 py-8 text-center text-base text-gray-500'>
+          <p>&copy; {new Date().getFullYear()} My Website. All rights reserved.</p>
+        </div>
+    </footer>
+  )
+}
+
+export default Footer
